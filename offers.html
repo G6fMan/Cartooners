@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض - CartoonerS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        .notification-bar {
+            background-color: #FFD700;
+            color: #121212;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+        }
+        .series-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .series-card {
+            background: #1e1e1e;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .series-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.5);
+        }
+        .series-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .series-card h2 {
+            color: #FFD700;
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+        .menu-icon {
+            color: #FFD700;
+            font-size: 24px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: #2e2e2e;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .dropdown a {
+            color: #FFD700;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        .dropdown a:hover {
+            background: #333;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="notification-bar">
+    <p>الحلقات ليست لنا نحن فقط نجمعها لنسهل علي المشاهد طريقة المشاهدة ونحن لا ننسبها إلينا.</p>
+</div>
+
+<div class="logo">
+    <img src="logo.png" alt="شعار">
+</div>
+
+<h1>العروض</h1>
+
+<div class="menu" onclick="toggleDropdown(event)">
+    <span class="menu-icon">☰</span>
+    <div class="dropdown" id="dropdownMenu">
+        <a href="index.html">الصفحة الرئيسية</a>
+    </div>
+</div>
+
+<div class="series-container" id="seriesContainer">
+    <div class="series-card">
+        <a href="AdventureTime.html" style="color: white; text-decoration: none;">
+            <img src="adventure_time_poster.jpg" alt="وقت المغامرة">
+            <h2>وقت المغامرة</h2>
+        </a>
+    </div>
+
+    <div class="series-card">
+        <a href="CraigOfTheCreek.html" style="color: white; text-decoration: none;">
+            <img src="craig_of_the_creek_season6.jpg" alt="كريغ من الجدول">
+            <h2>كريغ من الجدول</h2>
+        </a>
+    </div>
+
+    <!-- يمكنك إضافة المزيد من البطاقات هنا -->
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 CartoonerS. جميع الحقوق محفوظة.</p>
+    <p>تواصل معنا عبر: <a href="mailto:contact@cartooners.com" style="color: #FFD700;">contact@cartooners.com</a></p>
+</div>
+
+<script>
+    function toggleDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('dropdownMenu');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    window.onclick = function() {
+        const dropdown = document.getElementById('dropdownMenu');
+        dropdown.style.display = 'none';
+    };
+</script>
+
+</body>
+</html>
