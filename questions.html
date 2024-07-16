@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار صورة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212; /* لون الخلفية */
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* ترتيب الصور عمودياً */
+            gap: 20px;
+        }
+        .image {
+            border: 2px solid transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        .image:hover {
+            border-color: #FFD700; /* لون الحدود عند التحويم */
+        }
+        .selected {
+            border-color: #FFD700; /* لون الحدود عند الاختيار */
+        }
+        img {
+            width: 200px;  /* حجم الصورة */
+            height: 200px; /* حجم الصورة */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image" onclick="selectImage(this); window.location.href=' AdventureTime Arabic.html ';">
+        <img src="image1.jpg" alt="صورة 1">
+    </div>
+    <div class="image" onclick="selectImage(this); window.location.href='AdventureTime.html';">
+        <img src="image2.jpg" alt="صورة 2">
+    </div>
+</div>
+
+<script>
+    function selectImage(selected) {
+        const images = document.querySelectorAll('.image');
+        images.forEach(image => {
+            image.classList.remove('selected');
+        });
+        selected.classList.add('selected');
+    }
+</script>
+
+</body>
+</html>

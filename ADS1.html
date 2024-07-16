@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> وقت المغامرة - الموسم الأول مترجم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Cairo', sans-serif;
+            position: relative;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .episode-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .episode {
+            cursor: pointer;
+            transition: transform 0.2s;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .episode img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .episode:hover img {
+            transform: scale(1.05);
+        }
+        .episode:hover {
+            transform: scale(1.02);
+        }
+        p {
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+        .menu-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .menu-button:hover {
+            background-color: #e64a19;
+        }
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #222;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .nav-menu button {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .nav-menu button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+<button class="menu-button" onclick="toggleMenu()">القائمة</button>
+<div class="nav-menu" id="navMenu">
+    <button onclick="window.location.href='offers.html'">قائمة العروض</button>
+    <button onclick="window.location.href='index.html'">العودة للرئيسية</button>
+</div>
+
+<h1>وقت المغامرة - الموسم الأول مترجم</h1>
+
+<div class="episode-container">
+    <div class="episode">
+        <a href="https://videa.hu/videok/film-animacio/ad-s1-e1-WD77Wcvmaj5UJXfU" target="_blank">
+            <img src="episode1.jpg" alt="الحلقة 1">
+        </a>
+        <p>الحلقة 1</p>
+    </div>
+    <div class="episode">
+        <a href="episode2.html">
+            <img src="episode2.jpg" alt="الحلقة 2">
+        </a>
+        <p>الحلقة 2</p>
+    </div>
+    <div class="episode">
+        <a href="episode3.html">
+            <img src="episode3.jpg" alt="الحلقة 3">
+        </a>
+        <p>الحلقة 3</p>
+    </div>
+    <!-- أضف باقي الحلقات بنفس النمط -->
+    <div class="episode">
+        <a href="episode28.html">
+            <img src="episode28.jpg" alt="الحلقة 28">
+        </a>
+        <p>الحلقة 28</p>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('navMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
